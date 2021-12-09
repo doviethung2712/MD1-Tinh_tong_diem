@@ -39,8 +39,8 @@
         let diem3 = document.getElementById('c').value;
         let tinhtong ;
 
-        tinhtong = (parseInt(diem1) + parseInt(diem2) + parseInt(diem3));
-        document.getElementById('kq2').innerText = tinhtong;
+        tinhtong = (parseFloat(diem1) + parseFloat(diem2) + parseFloat(diem3));
+        document.getElementById('kq2').innerText = Math.round( tinhtong * 100) / 100;
     }
 
     function reset() {
