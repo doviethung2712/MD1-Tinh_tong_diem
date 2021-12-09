@@ -12,15 +12,16 @@
         <th>Sinh</th>
     </tr>
     <tr>
-        <td><input type="text" id="a"></td>
-        <td><input type="text" id="b"></td>
-        <td><input type="text" id="c"></td>
-        <td><button onclick="kq1()" id="tt">Tính tổng</button></td>
-        <td><button onclick="kq2()" id="ttb">Tính TB</button></td>
+        <td><input type="text" id="a" ></td>
+        <td><input type="text" id="b" ></td>
+        <td><input type="text" id="c" ></td>
+        <td><button onclick="kq1()" id="tt" >Tính tổng</button></td>
+        <td><button onclick="kq2()" id="ttb" >Tính TB</button></td>
+        <td><button onclick="reset() ">Reset</button></td>
     </tr>
 </table>
- <p id="kq1"> </p>
-<p id="kq2"></p>
+ <p id="kq1" > </p>
+<p id="kq2" > </p>
 
 
 <script>
@@ -29,11 +30,8 @@
         let diem2 = document.getElementById('b').value;
         let diem3 = document.getElementById('c').value;
         let tinhtb ;
-
-
-        tinhtb = (parseInt(diem1) + parseInt(diem2) + parseInt(diem3)) /3;
-        document.getElementById('kq1').innerText = tinhtb;
-
+        tinhtb = (parseFloat(diem1) + parseFloat(diem2) + parseFloat(diem3)) /3;
+        document.getElementById('kq1').innerText = Math.round( tinhtb * 100) /100;
     }
     function kq1() {
         let diem1 = document.getElementById('a').value;
@@ -43,6 +41,15 @@
 
         tinhtong = (parseInt(diem1) + parseInt(diem2) + parseInt(diem3));
         document.getElementById('kq2').innerText = tinhtong;
+    }
+
+    function reset() {
+        let diem1 = document.getElementById('a').value = " ";
+        let diem2 = document.getElementById('b').value = " ";
+        let diem3 = document.getElementById('c').value = " ";
+       let kq1 = document.getElementById('kq1').innerText = " ";
+       let kq2 = document.getElementById('kq2').innerText  = " ";
+
     }
 
 </script>
