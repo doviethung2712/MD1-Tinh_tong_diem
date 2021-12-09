@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Điểm TB</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Vật Lý</th>
+        <th>Hóa</th>
+        <th>Sinh</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="a"></td>
+        <td><input type="text" id="b"></td>
+        <td><input type="text" id="c"></td>
+        <td><button onclick="kq1()" id="tt">Tính tổng</button></td>
+        <td><button onclick="kq2()" id="ttb">Tính TB</button></td>
+    </tr>
+</table>
+ <p id="kq1"> </p>
+<p id="kq2"></p>
+
+
+<script>
+    function kq2() {
+        let diem1 = document.getElementById('a').value;
+        let diem2 = document.getElementById('b').value;
+        let diem3 = document.getElementById('c').value;
+        let tinhtb ;
+
+
+        tinhtb = (parseInt(diem1) + parseInt(diem2) + parseInt(diem3)) /3;
+        document.getElementById('kq1').innerText = tinhtb;
+
+    }
+    function kq1() {
+        let diem1 = document.getElementById('a').value;
+        let diem2 = document.getElementById('b').value;
+        let diem3 = document.getElementById('c').value;
+        let tinhtong ;
+
+        tinhtong = (parseInt(diem1) + parseInt(diem2) + parseInt(diem3));
+        document.getElementById('kq2').innerText = tinhtong;
+    }
+
+</script>
+
+</body>
+</html>
